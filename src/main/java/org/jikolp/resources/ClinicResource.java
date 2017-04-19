@@ -2,14 +2,17 @@ package org.jikolp.resources;
 
 import com.owlike.genson.Genson;
 import org.jikolp.database.MySQLConnection;
+import org.jikolp.model.City;
 import org.jikolp.model.Clinic;
 import org.jikolp.model.Doctor;
 import org.jikolp.model.Image;
 
+import javax.print.attribute.standard.Media;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.*;
 
@@ -18,7 +21,6 @@ import java.util.*;
  * Здесь представлены методы, к котором мы обращаемся через ссылку,
  * а они выдают нам информацию из базы данных MySQL.
  */
-
 
 
 //входная точка /clinics/

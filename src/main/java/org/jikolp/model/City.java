@@ -1,7 +1,7 @@
 package org.jikolp.model;
 
 /**
- *Описание шаблона города
+ * Описание шаблона города
  */
 
 public class City {
@@ -15,7 +15,7 @@ public class City {
     }
 
     //конструктор с необходимыми параметрами
-    public City(String name, int city_id) {
+    public City(int city_id, String name) {
         this.name = name;
         this.city_id = city_id;
     }
