@@ -2,7 +2,7 @@ package org.jikolp.security;
 
 import org.glassfish.jersey.internal.util.Base64;
 import org.jikolp.database.MySQLConnection;
-import org.jikolp.model.ErrorMessage;
+import org.jikolp.model.ServerAnswer;
 import javax.ws.rs.Produces;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
@@ -101,9 +101,9 @@ public class SecurityFilter implements ContainerRequestFilter {
                 }
 
                 // если где-то произошла ошибка, то формируем ошибку и передаем ее как ответ пользователю
-                final ErrorMessage errorMessage = new ErrorMessage("cannot access the resource", 001, "yeldos.com");
+                final ServerAnswer serverAnswer = new ServerAnswer("Cannot access the resource", 0);
                 final Response unAuthorizedStatus = Response.status(Response.Status.UNAUTHORIZED)
-                        .entity(errorMessage)
+                        .entity(serverAnswer)
                         .build();
                 containerRequestContext.abortWith(unAuthorizedStatus);
             }
