@@ -159,7 +159,11 @@
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="42" parent="11" name="PRIMARY">
+    <column id="42" parent="11" name="phone">
+      <Position>4</Position>
+      <DataType>varchar(11)|0</DataType>
+    </column>
+    <key id="43" parent="11" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
